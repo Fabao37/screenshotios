@@ -1,75 +1,250 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { Image, View } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-
-export default function HomeScreen() {
+export default function Logo() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Image source={require('../../assets/images/logo.png')} />
+    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
+
+
+
+// import { Entypo, FontAwesome } from "@expo/vector-icons"; // ou use react-native-vector-icons
+// import React from "react";
+// import { Dimensions, Image, StyleSheet, TouchableOpacity, View } from "react-native";
+
+// const { width, height } = Dimensions.get("window");
+
+// const CardUser = () => {
+//   return (
+//     <View style={styles.container}>
+
+//       {/* Alterne para poder tirar o print da imagem da mulher e do homem */}
+//       <Image source={require('../../assets/images/mulher.png')} style={styles.image} />
+//       {/* <Image source={require('../../assets/images/homem.jpg')} style={styles.image} /> */}
+
+
+//       <View style={styles.buttonContainer}>
+//         <TouchableOpacity style={styles.button}>
+//           <Entypo name="cross" size={40} color="#ff0066" />
+//         </TouchableOpacity>
+//         <TouchableOpacity style={styles.button}>
+//           <FontAwesome name="star" size={32} color="#4aa3ff" />
+//         </TouchableOpacity>
+//         <TouchableOpacity style={styles.button}>
+//           <Entypo name="heart" size={40} color="#00cc66" />
+//         </TouchableOpacity>
+//       </View>
+//     </View>
+//   );
+// };
+
+// export default CardUser;
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "#000",
+//   },
+//   image: {
+//     width: width,
+//     height: height,
+//     resizeMode: "cover",
+//   },
+//   buttonContainer: {
+//     position: "absolute",
+//     bottom: 60,
+//     width: "100%",
+//     flexDirection: "row",
+//     justifyContent: "space-evenly",
+//     alignItems: "center",
+//     paddingHorizontal: 20,
+//   },
+//   button: {
+//     backgroundColor: "#fff",
+//     borderRadius: 50,
+//     padding: 15,
+//     elevation: 5,
+//   },
+// });
+
+
+
+
+// import { AntDesign, Ionicons } from '@expo/vector-icons';
+// import { useNavigation } from '@react-navigation/native';
+// import React, { useState } from 'react';
+// import {
+//   Keyboard,
+//   SafeAreaView, StyleSheet,
+//   Text, TextInput, TouchableOpacity, TouchableWithoutFeedback,
+//   View
+// } from 'react-native';
+
+
+// const Login = () => {
+//   const navigation = useNavigation();
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+//   const [emailError, setEmailError] = useState('');
+//   const [passwordError, setPasswordError] = useState('');
+//   const [showPassword, setShowPassword] = useState(false);
+
+
+//   return (
+//     <SafeAreaView style={styles.container}>
+
+//       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+
+//         <View style={styles.containerContent}>
+//           <View style={{ paddingBottom: 70 }}>
+//             <Text style={{
+//               fontSize: 40,
+//               fontWeight: '400',
+//               letterSpacing: 2,
+//               color: '#06b6d4',
+//               //fontFamily: 'Pacifico_400Regular',
+//             }}>
+//               evǝnto
+//             </Text>
+//           </View>
+//           <View style={styles.content}>
+//             <View style={styles.inputContainer}>
+//               <TextInput
+//                 autoCapitalize="none"
+//                 keyboardType="email-address"
+//                 placeholder='e-mail'
+//                 value={email}
+//                 onChangeText={(text) => {
+//                   setEmail(text);
+//                   setEmailError('');
+//                 }}
+//                 style={styles.input}
+//               />
+//               <View style={{ paddingTop: 25 }}>
+//                 {emailError ? <Text style={{ color: 'red', bottom: 18 }}>{emailError}</Text> : null}
+//               </View>
+//             </View>
+//             <View style={styles.inputContainer}>
+
+//               <TextInput
+//                 secureTextEntry={!showPassword}
+//                 value={password}
+//                 placeholder='Senha'
+//                 onChangeText={(text) => {
+//                   setPassword(text);
+//                   setPasswordError('');
+//                 }}
+//                 style={styles.input}
+//               />
+//               <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.iconContainer}>
+//                 <Ionicons name={showPassword ? 'eye-outline' : 'eye-off-outline'} size={20} color='gray' />
+//               </TouchableOpacity>
+//               <View style={{ paddingTop: 25 }}>
+//                 {passwordError ? <Text style={{ color: 'red', bottom: 18 }}>{passwordError}</Text> : null}
+//               </View>
+//             </View>
+//             <TouchableOpacity
+//               style={styles.button}
+
+//             >
+//               <AntDesign name='arrowright' color='white' size={25} />
+//             </TouchableOpacity>
+//           </View>
+//           <View style={{ width: '100%', flexDirection: 'row', justifyContent: 'space-around' }}>
+//             <TouchableOpacity
+//             >
+//               <Text style={styles.text}>
+//                 Criar conta
+//               </Text>
+//             </TouchableOpacity>
+//             <TouchableOpacity
+
+//             >
+//               <Text style={styles.text}>
+//                 Esqueci minha senha
+//               </Text>
+//             </TouchableOpacity>
+//           </View>
+//         </View>
+
+//       </TouchableWithoutFeedback>
+
+//     </SafeAreaView >
+//   );
+// };
+
+// export default Login;
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: 'white'
+//   },
+//   containerContent: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   },
+//   title: {
+//     fontSize: 30,
+//     //fontFamily: 'Poppins_500Medium',
+//     color: '#06b6d4',
+//     marginBottom: 6
+//   },
+//   content: {
+//     width: '100%',
+//     padding: 20
+//   },
+
+//   input: {
+//     flexDirection: "row",
+//     backgroundColor: 'rgba(0,0,0,0.1)',
+//     borderRadius: 10,
+//     justifyContent: "center",
+//     alignItems: "center",
+//     padding: 10,
+//     gap: 10,
+//     //fontFamily: 'Poppins_400Regular',
+//   },
+//   text: {
+//     color: '#06b6d4',
+//     //fontFamily: 'Poppins_400Regular',
+//     fontSize: 14,
+//   },
+//   entrar: {
+//     //fontFamily: 'Poppins_400Regular',
+//     fontSize: 18,
+//     color: 'white',
+//   },
+//   subText: {
+//     //fontFamily: 'Poppins_400Regular',
+//     fontSize: 14,
+//   },
+
+//   button: {
+//     flexDirection: "row",
+//     backgroundColor: '#06b6d4',
+//     borderRadius: 10,
+//     justifyContent: "center",
+//     alignItems: "center",
+//     padding: 8,
+//     marginTop: 32
+//   },
+//   textBottom: {
+//     flexDirection: 'row',
+
+//   },
+//   inputContainer: {
+//     marginVertical: 10,
+//   },
+//   iconContainer: {
+//     position: 'absolute',
+//     right: 10,
+//     top: 10
+//   },
+
+// })
+
