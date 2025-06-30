@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleDisplayName</key>
+    <string>evǝnto</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.fabioportela.lovent</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>exp+lovent</string>
+        </array>
+      </dict>
+    </array>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+
+    <!-- Encriptação -->
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
+
+    <!-- Versão mínima -->
+    <key>LSMinimumSystemVersion</key>
+    <string>12.0</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+
+    <!-- Segurança de transporte -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <false/>
+      <key>NSAllowsLocalNetworking</key>
+      <true/>
+    </dict>
+
+    <!-- 📸 Câmera -->
+    <key>NSCameraUsageDescription</key>
+    <string>Usamos sua câmera para que você possa tirar fotos e compartilhar experiências ou eventos locais com outros usuários.</string>
+
+    <!-- Localização -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Usamos sua localização enquanto o app está aberto para exibir eventos próximos a você, como academias, festas e promoções em comércios do seu bairro.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Usamos sua localização em segundo plano para enviar notificações sobre novos eventos ou oportunidades em locais que você frequenta, como shows e outros eventos.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Permitimos o uso da sua localização a qualquer momento para exibir eventos ao vivo, oportunidades locais e notificações relevantes mesmo quando o app não está em uso.</string>
+
+    <!-- Microfone -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Usamos o microfone para permitir a gravação de áudio ao capturar vídeos que você pode compartilhar com a comunidade local.</string>
+
+    <!-- Biblioteca de Fotos -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Acessamos sua galeria para que você possa escolher imagens e compartilhá-las em publicações sobre eventos, experiências ou serviços da sua região.</string>
+
+    <!-- Tela de inicialização -->
+    <key>UILaunchStoryboardName</key>
+    <string>SplashScreen</string>
+
+    <!-- Requisitos mínimos de hardware -->
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>arm64</string>
+    </array>
+
+    <!-- Tela cheia -->
+    <key>UIRequiresFullScreen</key>
+    <false/>
+
+    <!-- Estilo da barra de status -->
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleDefault</string>
+
+    <!-- Orientações suportadas -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+
+    <!-- Tema padrão -->
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
+
+    <!-- Controle de aparência da status bar -->
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+  </dict>
+</plist>
